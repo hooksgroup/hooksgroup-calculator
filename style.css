@@ -1,0 +1,579 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+#hooksgroup_calc {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 32px;
+    font-style: normal;
+    line-height: 2.5;
+    text-transform: none;
+}
+
+#step2,
+#step3,
+#step4,
+#step5,
+#result {
+    display: none;
+}
+
+#mobile-buttons {
+    display: none;
+}
+
+
+#hooksgroup_calc .title-question {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+#hooksgroup_calc .form-check input {
+    margin-top: 23px;
+}
+
+#hooksgroup_calc .form-check label {
+    margin-left: 25px;
+}
+
+#hooksgroup_calc .form-check-input[type=radio] {
+    border: 1px solid #039ffb;
+    height: 34px;
+    width: 34px;
+}
+.form-check-input[type=radio]:checked {
+    background-color: #039ffb;
+}
+
+.under-title-text {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/******** Inputs *********/
+#result input {
+    font-size: 32px;
+    font-weight: 700 !important;
+}
+
+#result input::placeholder {
+    color: #0000003B;
+    font-size: 32px;
+    font-weight: 700 !important;
+    
+}
+
+input[type='number']:focus {
+    -moz-box-shadow: -1px 13px 5px -7px rgba(0,0,0,0.07);
+    box-shadow: -1px 13px 5px -7px rgba(0,0,0,0.07);
+  -webkit-box-shadow: -1px 13px 5px -7px rgba(0,0,0,0.07);
+  box-shadow: none;
+  outline: none !important;
+}
+
+
+input#conversionRevenue,
+input#conversionRate,
+input#monthlyTraffic {
+    border: none!important;
+    border-bottom: 3px solid #0000005E !important;
+    border-radius: 0 !important;
+    line-height: 1;
+}
+
+input#monthlyTraffic {
+    width: 540px; 
+}
+#monthlyTraffic:focus-visible {
+    outline-offset: 0px;
+    border: red;
+}
+
+input#conversionRate {
+    display: inline-block;
+    width: 131px;
+}
+
+input#conversionRevenue {
+    display: inline-block;
+    width: 207px;
+}
+
+.percent-symbol {
+    font-size: 32px;
+    opacity: 0.56;
+}
+
+.step-4-q-1 .title-question {
+    margin-bottom: 38px;
+}
+
+.step-4-q-2 .title-question {
+    margin-bottom: 23px;
+    margin-top: 73px;
+}
+
+#step4 .divider-block {
+    height: 84px;
+}
+
+#step5 h2.title-question {
+    margin-bottom: 15px;
+}
+
+#step5 .under-title-text {
+    display: block;
+    margin-bottom: 54px;
+}
+
+#step5 .divider-block {
+    height: 230px;
+}
+
+/****** Progress Bar *******/
+
+.divider-block {
+    height: 50px;
+}
+
+#hooksgroup_calc .progress-bar {
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    font-size: 16px;
+    text-align: left;
+}
+
+#hooksgroup_calc .progress-bar .pr-text{
+    color: #5e5e5e;
+}
+
+#hooksgroup_calc .progress-scale {
+    border: 0 solid #039ffb;
+    border-color: #039ffb;
+    border-bottom: 4px solid #039ffb;
+}
+#hooksgroup_calc .progress-20 {
+    width: 20%;
+}
+#hooksgroup_calc .progress-40 {
+    width: 40%;
+}
+#hooksgroup_calc .progress-60 {
+    width: 60%;
+}
+#hooksgroup_calc .progress-80 {
+    width: 80%;
+}
+#hooksgroup_calc .progress-100 {
+    width: 100%;
+}
+
+
+#hooksgroup_calc .continue-btn {
+    background-color: #039ffb;
+    border-radius: 0;
+    border: 1px solid #039ffb;
+    color: #fff;
+    float: right;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    outline: none;
+    padding: 19px 100px 19px 24px;
+    text-align: left;
+    transition: background-color .2s ease;
+}
+
+#hooksgroup_calc .back-btn {
+    padding: 19px 24px 19px 130px;
+    float: left;
+}
+
+#hooksgroup_calc .arrow {
+    background-image: url(https://digitalya.co/cta-arrow-white.2774c190.svg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    display: block;
+    height: 24px;
+    margin-left: 130px;
+    margin-top: -13px;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 31px;
+    z-index: 1;
+}
+
+#hooksgroup_calc .arrow-back {
+    -webkit-transform: rotate(180deg);
+    margin-left: -105px;
+    margin-top: 3px;
+}
+
+
+#hooksgroup_calc .continue-btn:hover .arrow {
+    animation: animate-estimation-btn .6s ease-in-out both;
+}
+
+
+/*** Result Block ****/
+#result h2 {
+    margin-bottom: 40px;
+}
+
+.result-double {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    width: 48%;
+}
+.result-double-first {
+    border-right: 3px solid #0000003B;
+}
+
+.result-double-second {
+    padding-left: 40px;
+}
+
+.result-double .highlighting {
+    color: #039FFB;
+    display: block;
+    font-size: 40px;
+    line-height: 2;
+    padding-bottom: 36px;
+}
+
+#result .result-values {
+    font-size: 24px;
+    line-height: 1;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+#result .result-values-top {
+    padding-bottom: 13px;
+}
+
+#result .est-mthl-rev {
+    font-size: 32px;
+    font-weight: 500;
+    padding-top: 50px;
+}
+
+#est_monthly_revenue_result {
+    color: #039FFB;
+}
+
+#conversion_rate_result,
+#conversion_rate_result_fixed,
+#monthly_traffic_result,
+#conversion_revenue_result,
+#est_monthly_revenue_result {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+#result .revenue-lift {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    padding-bottom: 60px;
+}
+
+#save_to_pdf {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+/*   Hide Arrows:   */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+#result_devider {
+    background-color: #0000003B;
+    display: block;
+    height: 3px;
+    margin-bottom: 30px;
+    margin-top: 17px;
+    width: 100%;
+}
+
+
+
+/*SLIDER*/
+.range .form-range::-webkit-slider-thumb {
+  background: #039FFB;
+  border-radius: 35px;
+  height: 35px;
+  margin-top: -16px;
+  width: 35px;
+
+}
+
+.range .form-range::-moz-range-thumb {
+  background: #039FFB;
+  margin-top: -6px;
+}
+
+.range .form-range::-ms-thumb {
+  background: #039FFB;
+  margin-top: -6px;
+}
+
+.range input::-webkit-slider-runnable-track {
+     width: 100%;
+     height: 3px;
+     cursor: pointer;
+     background: #000;
+}
+ .range input::-moz-range-track {
+     width: 100%;
+     height: 3px;
+     cursor: pointer;
+     background: #000;
+}
+ .range input::-ms-track {
+     width: 100%;
+     height: 3px;
+     cursor: pointer;
+     background: #000;
+}
+.range-labels {
+     margin: 18px -33px 0;
+     padding: 0;
+     list-style: none;
+     margin-top: 1px;
+}
+ .range-labels li {
+     position: relative;
+     float: left;
+     width: 10%;
+     text-align: center;
+     color: #000;
+     font-size: 14px;
+     font-weight: 700;
+     cursor: pointer;
+}
+ .range-labels li::before {
+    position: absolute;
+    top: -28px;
+    right: 0;
+    left: 0;
+    content: "";
+    margin: 0 auto;
+    width: 1px;
+    height: 30px;
+    background: #000000;
+    border-radius: 5px;
+    z-index: -1;
+}
+.range-labels li.five::before {
+    height: 40px;
+    top: -34px;
+}
+ .range-labels .active {
+     color: #37adbf;
+}
+ .range-labels .selected::before {
+     background: #37adbf;
+}
+ .range-labels .active.selected::before {
+     display: none;
+}
+
+
+/*************** MEDIA QUERY ****************/
+/* LAPTOP */
+@media (max-width: 1400px) {
+}
+
+/* small LAPTOP */
+@media (max-width: 1024px){ 
+    .range-labels {
+        margin: 10px -29px 0;
+        margin-top: 1px;
+    } 
+    #mobile-buttons {
+        display: block;
+    }
+    #desktop-buttons {
+        display: none;
+    }
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    #hooksgroup_calc {
+        font-size: 24px;
+    }   
+    .divider-block {
+        height: 40px;
+    }
+    #hooksgroup_calc .title-question {
+        font-size: 33px;
+        margin-bottom: 20px;
+    }
+    #hooksgroup_calc .form-check label {
+        margin-left: 14px;
+    }
+    #hooksgroup_calc .form-check input {
+        margin-top: 14px;
+    }
+    #step5 .divider-block {
+        height: 102px;
+    }
+    .result-double .highlighting {
+        font-size: 37px;
+        line-height: 1;
+    }
+    #result .result-values {
+        font-size: 23px;
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    #result .est-mthl-rev {
+        padding-top: 30px;
+        font-size: 30px;
+    }
+    #result .revenue-lift {
+        font-size: 23px;
+        padding-bottom: 24px;
+    }
+    #hooksgroup_calc .continue-btn {
+        padding: 15px 100px 15px 24px;
+        padding-right: 65px;
+        padding-left: 16px;
+       
+    }
+    #hooksgroup_calc .back-btn {
+        padding: 15px 24px 15px 130px;
+        padding-left: 100px;
+        padding-right: 16px;
+    }
+    #hooksgroup_calc .arrow {
+        margin-left: 107px;
+    }
+    #hooksgroup_calc .arrow-back {
+        margin-left: -89px;
+    }
+    .range-labels {
+        margin: 18px -39px 0;
+        margin-top: 1px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 475px) { 
+    #hooksgroup_calc {
+        font-size: 20px;
+    }
+    #hooksgroup_calc #result {
+        text-align: center;
+    }
+    #hooksgroup_calc #result .title-question {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+    #hooksgroup_calc .title-question {
+        font-size: 29px;
+        margin-bottom: 20px;
+    }
+    #hooksgroup_calc .form-check input {
+        margin-top: 7px;
+    }
+    #hooksgroup_calc .continue-btn {
+       
+    }
+    #hooksgroup_calc .back-btn {
+    }
+    #step2 div:nth-child(5) > label {
+        margin-top: -39px;
+    }
+    #step4 .divider-block {
+        height: 47px;
+    }
+    input#monthlyTraffic {
+        width: 314px;
+    }
+    #hooksgroup_calc .form-check label {
+        margin-left: 8px;
+    }
+    .divider-block {
+        height: 50px;
+    }
+    .under-title-text {
+        font-size: 15px;
+    }
+    #step5 .under-title-text {
+        margin-bottom: 13px;
+    }
+    .result-double-second {
+        padding-left: 0;
+    }
+    .result-double .highlighting {
+        font-size: 26px;
+    }
+    .result-double .highlighting {
+        padding-bottom: 10px;
+    }
+    #result .est-mthl-rev {
+        padding-top: 23px;
+        font-size: 20px;
+    }
+    #result .result-values {
+        font-size: 26px;
+        padding-top: 45px;
+        padding-bottom: 18px;
+    }
+    #result .revenue-lift {
+        display: none;
+    }
+    #est_monthly_revenue_result {
+        display: block;
+        font-size: 28px;
+        margin-top: 11px;
+    }
+    .result-center-on-mobile,
+    #monthly_traffic_result {
+        display: block;
+        margin-top: 11px;
+    }
+    #result_devider {
+        margin-top: 27px;
+        margin-bottom: 40px;
+    }
+    .range-labels {
+        margin-top: 1px;
+        margin-right: -22px;
+        margin-left: -21px;
+    }
+    .range .form-range::-webkit-slider-thumb {
+      background: #039FFB;
+      margin-top: -9px;
+      height: 18px;
+      width: 23px;
+      border-radius: 20px;
+    }
+    #hooksgroup_calc .continue-btn#save_to_pdf {
+        float: inherit;
+    }
+    #hooksgroup_calc #mobile-buttons .progress-bar {
+        padding-top: 11px;
+    }
+}
+
+@media (max-width: 413px) { 
+    #step1 #mobile_lp_q {
+        margin-top: -32px;
+        line-height: 1.5;
+    }
+}

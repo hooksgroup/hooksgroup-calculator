@@ -1,0 +1,415 @@
+
+<!-- Media Query tag -->
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+
+
+<!-- HTML2PDF plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
+<!-- Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link href="style.css" rel="stylesheet">
+
+<div style="height: 20px"></div>
+
+<div class="container" id="hooksgroup_calc">
+
+  <!-- Step 1 -->
+  <div class="row align-items-end" id="step1">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <h2 class="title-question">Pages you need to generate more revenue from:</h2>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="moreRevenue" id="moreRevenue1" value="landing" checked>
+        <label class="form-check-label" for="moreRevenue1" id="mobile_lp_q"> Landing Pages (For Paid Campaigns) </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="moreRevenue" id="moreRevenue2" value="website">
+        <label class="form-check-label" for="moreRevenue2"> Main Website </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="moreRevenue" id="moreRevenue3" value="both">
+        <label class="form-check-label" for="moreRevenue3"> Both </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="moreRevenue" id="moreRevenue4" value="notSure">
+        <label class="form-check-label" for="moreRevenue4"> Not Sure </label>
+      </div>
+    </div>
+    <div class="w-100 divider-block"></div>
+    <div class="col-12" id="desktop-buttons">
+      <div class="row align-items-end">
+        <div class="col-8">
+          <div class="progress-bar">
+            <div class="progress-20 progress-scale">
+              <span><b>Step 1</b> <span class="pr-text">out of 5<span></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <button onclick="fisrtStepSubmitHandler(); hooksGroupCalc();" type="button" class="btn continue-btn">Continue<span class="arrow"></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12" id="mobile-buttons">
+      <div class="row justify-content-end">
+        <div class="col-6">
+          <button onclick="fisrtStepSubmitHandler(); hooksGroupCalc();" type="button" class="btn continue-btn">Continue<span class="arrow"></span></button>
+        </div>
+        <div class="col-12">
+          <div class="progress-bar">
+            <div class="progress-20 progress-scale">
+              <span><b>Step 1</b> <span class="pr-text">out of 5<span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 divider-block"></div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="row align-items-end" id="step2">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <h2 class="title-question">How Many Pages? (Estimate)</h2>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="howManyPages" id="howManyPages1" value="5" checked>
+        <label class="form-check-label" for="howManyPages1"> 5 - 10 </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="howManyPages" id="howManyPages2" value="10">
+        <label class="form-check-label" for="howManyPages2"> 10 - 25 </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="howManyPages" id="howManyPages3" value="25">
+        <label class="form-check-label" for="howManyPages3"> 25 - 50 </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="howManyPages" id="howManyPages4" value="50">
+        <label class="form-check-label" for="howManyPages4"> 50+ (Entire website including articles & other resources) </label>
+      </div>
+    </div>
+    <div class="w-100 divider-block"></div>
+    <div class="col-12" id="desktop-buttons">
+      <div class="row align-items-end">
+        <div class="col-xl-8 col-lg-6 col-md-6 col-6">
+          <div class="progress-bar">
+            <div class="progress-40 progress-scale">
+              <span><b>Step 2</b> <span class="pr-text">out of 5<span></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-3 col-3">
+          <button onclick="secondStepBackHandler();" type="button" class="btn back-btn continue-btn"><span class="arrow-back arrow"></span>Back</button>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-3 col-3">
+          <button onclick="secondStepSubmitHandler(); hooksGroupCalc();" type="button" class="btn continue-btn">Continue<span class="arrow"></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12" id="mobile-buttons">
+      <div class="row align-items-end">
+        <div class="col-6">
+          <button onclick="secondStepBackHandler();" type="button" class="btn back-btn continue-btn"><span class="arrow-back arrow"></span>Back</button>
+        </div>
+        <div class="col-6">
+          <button onclick="secondStepSubmitHandler(); hooksGroupCalc();" type="button" class="btn continue-btn">Continue<span class="arrow"></span></button>
+        </div>
+        <div class="col-12">
+          <div class="progress-bar">
+            <div class="progress-40 progress-scale">
+              <span><b>Step 2</b> <span class="pr-text">out of 5<span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 divider-block"></div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="row align-items-end" id="step3">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <h2 class="title-question">Conversion Object</h2>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="conversionObject" id="conversionObject1" checked>
+        <label class="form-check-label" for="conversionObject1"> Lead Form Submission </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="conversionObject" id="conversionObject2">
+        <label class="form-check-label" for="conversionObject2"> Free Trial Signup </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="conversionObject" id="conversionObject3" >
+        <label class="form-check-label" for="conversionObject3"> Software Purchase or Download </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="conversionObject" id="conversionObject4" >
+        <label class="form-check-label" for="conversionObject4"> Other </label>
+      </div>
+    </div>
+    <div class="w-100 divider-block"></div>
+    <div class="col-12" id="desktop-buttons">
+      <div class="row align-items-end">
+        <div class="col-xl-8 col-lg-6 col-md-6 col-6">
+          <div class="progress-bar">
+            <div class="progress-60 progress-scale">
+              <span><b>Step 3</b> <span class="pr-text">out of 5<span></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-3 col-3">
+        <button onclick="thirdStepBackHandler();" type="button" class="btn back-btn continue-btn"><span class="arrow-back arrow"></span>Back</button>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-3 col-3">
+          <button onclick="thirdStepSubmitHandler(); hooksGroupCalc();" type="button" class="btn continue-btn">Continue<span class="arrow"></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12" id="mobile-buttons">
+      <div class="row align-items-end">
+        <div class="col-6">
+          <button onclick="thirdStepBackHandler();" type="button" class="btn back-btn continue-btn"><span class="arrow-back arrow"></span>Back</button>
+        </div>
+        <div class="col-6">
+          <button onclick="thirdStepSubmitHandler(); hooksGroupCalc();" type="button" class="btn continue-btn">Continue<span class="arrow"></span></button>
+        </div>
+        <div class="col-12">
+          <div class="progress-bar">
+            <div class="progress-60 progress-scale">
+              <span><b>Step 3</b> <span class="pr-text">out of 5<span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 divider-block"></div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="row align-items-end" id="step4">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="step-4-q-1">
+        <h2 class="title-question">Monthly Traffic:</h2>
+        <input 
+          type="number" 
+          placeholder="50,000" 
+          id="monthlyTraffic"
+          oninput="hooksGroupCalc();" 
+          autofocus
+        >
+      </div>
+      <div class="step-4-q-2">
+        <h2 class="title-question">Current Conversion Rate:</h2>
+        <input 
+          type="number" 
+          placeholder="1.4" 
+          id="conversionRate"
+          oninput="hooksGroupCalc();" 
+        >
+        <span class="percent-symbol">%</span>
+      </div>
+    </div>
+    <div class="w-100 divider-block"></div>
+    <div class="col-12" id="desktop-buttons">
+      <div class="row align-items-end">
+        <div class="col-xl-8 col-lg-6 col-md-6 col-6">
+          <div class="progress-bar">
+            <div class="progress-80 progress-scale">
+              <span><b>Step 4</b> <span class="pr-text">out of 5<span></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-3 col-3">
+          <button onclick="fourthStepBackHandler();" type="button" class="btn back-btn continue-btn"><span class="arrow-back arrow"></span>Back</button>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-3 col-3">
+          <button 
+            onclick="fourthStepSubmitHandler(); hooksGroupCalc();" 
+            disabled 
+            type="button" 
+            class="btn continue-btn"
+            id="btn-step-4" 
+          >Continue<span class="arrow"></span></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12" id="mobile-buttons">
+      <div class="row align-items-end">
+        <div class="col-6">
+          <button onclick="fourthStepBackHandler();" type="button" class="btn back-btn continue-btn"><span class="arrow-back arrow"></span>Back</button>
+        </div>
+        <div class="col-6">
+          <button 
+            onclick="fourthStepSubmitHandler(); hooksGroupCalc();" 
+            disabled 
+            type="button" 
+            class="btn continue-btn"
+            id="btn-step-4-mobile" 
+          >Continue<span class="arrow"></span></button>
+        </div>
+        <div class="col-12">
+          <div class="progress-bar">
+            <div class="progress-80 progress-scale">
+              <span><b>Step 4</b> <span class="pr-text">out of 5<span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 divider-block"></div>
+  </div>
+
+  <!-- Step 5 -->
+  <div class="row align-items-end" id="step5">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+      <div class="step-5-q-1">
+        <h2 class="title-question">Conversion Revenue/Worth:</h2>
+        <span class="under-title-text">Example: If 20% of 100 leads become customers (20) paying $100 each ($2000 total), one conversion would be worth $20.</span>
+        <input 
+          type="number" 
+          placeholder="5,300" 
+          id="conversionRevenue"
+          oninput="hooksGroupCalc();"
+          autofocus 
+        >
+        <span class="percent-symbol">$</span>
+      </div>
+    </div>
+    <div class="w-100 divider-block"></div>
+    <div class="col-12" id="desktop-buttons">
+      <div class="row align-items-end">
+        <div class="col-xl-8 col-lg-6 col-md-6 col-6">
+          <div class="progress-bar">
+            <div class="progress-100 progress-scale">
+              <span><b>Step 5</b> <span class="pr-text">out of 5<span></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-3 col-3">
+          <button onclick="fifthStepBackHandler();" type="button" class="btn back-btn continue-btn"><span class="arrow-back arrow"></span>Back</button>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-3 col-3">
+          <button 
+            onclick="fifthStepSubmitHandler(); hooksGroupCalc();" 
+            disabled 
+            type="button" 
+            class="btn continue-btn"
+            id="btn-step-5" 
+          >Continue<span class="arrow"></span></button>
+        </div>
+        </div>
+      </div>
+    <div class="col-12" id="mobile-buttons">
+      <div class="row align-items-end">
+        <div class="col-6">
+          <button onclick="fifthStepBackHandler();" type="button" class="btn back-btn continue-btn"><span class="arrow-back arrow"></span>Back</button>
+        </div>
+        <div class="col-6">
+          <button 
+            onclick="fifthStepSubmitHandler(); hooksGroupCalc();" 
+            disabled 
+            type="button" 
+            class="btn continue-btn"
+            id="btn-step-5-mobile" 
+          >Continue<span class="arrow"></span></button>
+        </div>
+        <div class="col-12">
+          <div class="progress-bar">
+            <div class="progress-100 progress-scale">
+              <span><b>Step 5</b> <span class="pr-text">out of 5<span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Result -->
+  <div class="row align-items-end" id="result">
+    <div class="col-xl-7 col-lg-7 col-md-12 col-12">
+        <div id="save_pdf_block">
+          <h2 class="title-question">Rough Estimate of CRO Program:</h2>
+          <div>
+            <div class="result-double result-double-first">
+              <span>Timeframe</span>
+              <span class="highlighting"><span id="result_monthes">00 Months</span></span>
+            </div>
+            <div class="result-double result-double-second">
+              <span>Pricing</span>
+              <span class="highlighting">$<span id="result_dollar">00</span>/mo</span>
+            </div>
+          </div>
+
+          <div class="result-values">
+            <span class="d-block result-values-top">Monthly Traffic: 
+              <span id="monthly_traffic_result">00</span>
+            </span>
+            <span class="d-block result-values-top">Conversion Revenue: 
+                <span class="result-center-on-mobile">
+                  <b>$</b><span id="conversion_revenue_result">00</span>
+                </span>
+            </span>
+            <span class="d-block result-values-top">Current Conversion Rate: 
+              <span id="conversion_rate_result">00</span><b>%</b>
+            </span>
+            <span class="d-block result-values-top">Estimated Monthly Revenue: 
+              <span id="est_monthly_revenue_result">$<span id="est_monthly_revenue">00</span></span>
+            </span>
+            <!-- <span class="d-block est-mthl-rev">Estimated Monthly Revenue: 
+              <span id="est_monthly_revenue_result">$<span id="est_monthly_revenue">00</span></span>
+            </span> -->
+            <span id="result_devider"></span>
+            <span class="d-block result-values-top">New Conversion Rate: 
+              <span id="conversion_rate_result_fixed">00</span><b>%</b>
+            </span>
+            <span class="d-block result-values-top">Estimated Monthly Revenue: 
+              <span id="est_monthly_revenue_result">$<span id="est_monthly_revenue_fixed">00</span></span>
+            </span>
+          </div>
+        </div>
+        <div class="range-slider">
+          <span class="revenue-lift">Explore Revenue Lift From Conversion Rate Gains:</span>
+          <div class="range">
+            <input type="range" class="form-range" 
+              min="1" 
+              max="10" 
+              step="0.5" 
+              id="ranger"
+              onchange="sliderChanger();" 
+            >
+          </div>
+          <ul class="range-labels">
+            <li>1%</li>
+            <li>2%</li>
+            <li>3%</li>
+            <li>4%</li>
+            <li class="five">5%</li>
+            <li>6%</li>
+            <li>7%</li>
+            <li>8%</li>
+            <li>9%</li>
+            <li>10%</li>
+          </ul>
+        </div>
+        <button class="btn continue-btn mb-4" id="save_to_pdf">Export to  PDF</button>
+        <div class="divider-block"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Calculator equations -->
+<script src="script.js"></script>
+
+
+
+
