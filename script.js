@@ -32,7 +32,7 @@ function hooksGroupCalc() {
 	// Timeframe:
 	let result_monthes = 12;
 	if (howManyPages == 5 && moreRevenue !== 'notSure') {
-		result_monthes = '3-6 Months';
+		result_monthes = '3-6 Months'; 
 	}
 	else if (howManyPages == 10 && moreRevenue !== 'notSure') {
 		result_monthes = '6-12 Months';
