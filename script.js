@@ -53,13 +53,13 @@ function hooksGroupCalc() {
 		result_dollar = 2300;
 	}
 	else if (howManyPages == 10) {
-		result_dollar = 2800;
+		result_dollar = 3600;
 	}
 	else if (howManyPages == 25) {
 		result_dollar = 5200;
 	}
 	else if (howManyPages == 50) {
-		result_dollar = 5200;
+		result_dollar = 8300;
 	}
 
 	let monthlyTraffic      = document.getElementById('monthlyTraffic').value;
